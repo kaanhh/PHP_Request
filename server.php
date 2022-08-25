@@ -3,7 +3,6 @@
 Autor: KAAN der Unermüdliche
 Verion: 0.1
 INFO: Bewerbungsaufgabe, Registrierung von Usern auf Website und speichern in Datenbank in PHP
-
 *************************************/
 
 session_start();
