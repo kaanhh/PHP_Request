@@ -3,6 +3,8 @@
 Autor: KAAN der Unermüdliche
 Verion: 0.1
 INFO: Bewerbungsaufgabe, Registrierung von Usern auf Website und speichern in Datenbank in PHP
+
+Quellenangabe: https://stackoverflow.com/questions/55665490/how-to-add-success-message-when-registration-is-completed
 *************************************/
 
 session_start();
@@ -64,5 +66,10 @@ if(count($errors) == 0){
     $query = "INSERT INTO benutzer(wtc_vorname, wtc_nachname, wtc_email , wtc_firma) VALUES ('$vorname','$nachname', '$email', '$firma')";
 
     mysqli_query($db, $query);
+    $_SESSION['email'] =  $email;
+    $_SESSION['success'] = "Sie wurden erfolgreich angemeldet!";
+
+    //Im nächsten Schritt soll eine erfolgreiche Weiterleidung kommen mit einer Meldung.
+   //header('location: index.php');
 }
 ?>
